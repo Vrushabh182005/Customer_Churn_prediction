@@ -1,0 +1,38 @@
+{
+  "info": {
+    "name": "Customer Churn API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/health"
+      }
+    },
+    {
+      "name": "Predict",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{base_url}}/predict",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"age\":35,\n  \"gender\":1,\n  \"tenure_months\":12,\n  \"monthly_charges\":65,\n  \"total_charges\":786,\n  \"contract_type\":\"Month-to-Month\",\n  \"internet_service\":\"Fiber Optic\",\n  \"tech_support\":0,\n  \"online_security\":0,\n  \"num_products\":2,\n  \"payment_method\":\"Electronic Check\",\n  \"paperless_billing\":1,\n  \"customer_service_calls\":3\n}"
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://127.0.0.1:8000"
+    }
+  ]
+}
